@@ -1,0 +1,7 @@
+<?php
+$con = mysql_connect("localhost", "root", "vish");
+if (!$con) {
+    die('Could not connect: ' . mysql_error());
+}
+mysql_select_db("metisme_challenge_test") or die("cannot select DB");
+?>
