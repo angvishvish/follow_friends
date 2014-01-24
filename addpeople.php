@@ -1,6 +1,7 @@
 <?php
+
 session_start();
-$con = mysql_connect("localhost", "root", "vish");
+$con = mysql_connect("localhost", "root", "");
 if (!$con) {
     die('Could not connect: ' . mysql_error());
 }

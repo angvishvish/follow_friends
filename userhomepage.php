@@ -7,8 +7,8 @@
         <link rel="shortcut icon" href="image.gif">
         <script src="jquery.js"></script>
         <script type="text/javascript">
-            function val(v){
-                if(v.value == ''){
+            function val(v) {
+                if (v.value == '') {
                     alert("thsi is empty");
                     return false;
                 }
@@ -17,13 +17,13 @@
             }
         </script>
         <script>
-            $(document).ready(function(){
-                var total_len=100;
+            $(document).ready(function() {
+                var total_len = 100;
                 $('#remaining').html("Remaining charecters " + total_len);
-                $('#pos').keyup(function(){
-                    var text_len=$('#pos').val().length;
-                    var rem_len=total_len-text_len;
-                    $('#remaining').html("Remaining charecters "+rem_len);
+                $('#pos').keyup(function() {
+                    var text_len = $('#pos').val().length;
+                    var rem_len = total_len - text_len;
+                    $('#remaining').html("Remaining charecters " + rem_len);
                 });
             });
         </script>

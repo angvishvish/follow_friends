@@ -7,17 +7,17 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="shortcut icon" href="image.gif">
         <script>
-            function val(v){
-                if(v.value == ''){
-                   alert('Email or Password Cannot be EMPTY ..');
+            function val(v) {
+                if (v.value == '') {
+                    alert('Email or Password Cannot be EMPTY ..');
                     return false;
                 }
                 else
                     return true;
             }
-            function value(v){
-                if(v.value == ''){
-                   alert('Email or Password Cannot be EMPTY ..');
+            function value(v) {
+                if (v.value == '') {
+                    alert('Email or Password Cannot be EMPTY ..');
                     return false;
                 }
                 else

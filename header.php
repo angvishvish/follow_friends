@@ -7,35 +7,35 @@
         <script src="jquery.js"></script>
         <link rel="shortcut icon" href="image.gif">
         <script>
-            $(document).ready(function(){
-                $('#followers').hide(); 
+            $(document).ready(function() {
+                $('#followers').hide();
                 $('#following').hide();
                 $('#mypost').hide();
                 $('#addpeople').hide();
-                $('#follow1').click(function(){
+                $('#follow1').click(function() {
                     $('#followers').slideToggle(500);
                     $('#following').hide();
                     $('#mypost').hide();
                     $('#mypost').hide();
                 });
-                $('#follow2').click(function(){
+                $('#follow2').click(function() {
                     $('#following').slideToggle(500);
                     $('#followers').hide();
                     $('#mypost').hide();
                     $('#mypost').hide();
-                });     
-                $('#follow3').click(function(){
+                });
+                $('#follow3').click(function() {
                     $('#mypost').slideToggle(500);
                     $('#following').hide();
                     $('#followers').hide();
-                    
+
                 });
-                $('#follow4').click(function(){
+                $('#follow4').click(function() {
                     $('#addpeople').slideToggle(500);
                     $('#followers').hide();
                     $('#following').hide();
                     $('#mypost').hide();
-                });     
+                });
             });
         </script>
     </head>
@@ -53,7 +53,7 @@
         <div id="mypost">
             <?php
             session_start();
-            $con = mysql_connect("localhost", "root", "vish");
+            $con = mysql_connect("localhost", "root", "");
             if (!$con) {
                 die('Could not connect: ' . mysql_error());
             }
@@ -86,7 +86,7 @@
                 </div>
                 <div id="followers" >
                     <?php
-                    $con = mysql_connect("localhost", "root", "vish");
+                    $con = mysql_connect("localhost", "root", "");
                     if (!$con) {
                         die('Could not connect: ' . mysql_error());
                     }
@@ -123,7 +123,7 @@
 
 <div id="following">
     <?php
-    $con = mysql_connect("localhost", "root", "vish");
+    $con = mysql_connect("localhost", "root", "");
     if (!$con) {
         die('Could not connect: ' . mysql_error());
     }
@@ -151,7 +151,7 @@ if (mysql_num_rows($result)) {
             </td>
             <td >
                 <form action='addpeople.php' method="post">
-                    <input type="hidden" value="<?php echo $row['UserId']?>" name="follow">
+                    <input type="hidden" value="<?php echo $row['UserId'] ?>" name="follow">
                     <input id="postname" type="submit" value="Follow.." name="id"/>
                 </form>
             </td>
@@ -167,7 +167,7 @@ echo "</table>";
 </div>
 <div id="addpeople" >
     <?php
-    $con = mysql_connect("localhost", "root", "vish");
+    $con = mysql_connect("localhost", "root", "");
     if (!$con) {
         die('Could not connect: ' . mysql_error());
     }
@@ -178,14 +178,14 @@ echo "</table>";
     $result = mysql_query($sql);
     ?>
     <table align="center"><?php
-    echo '<tr><strong>You may know ..</strong></tr>';
-    if (mysql_num_rows($result)) {
-        while ($row = mysql_fetch_array($result)) {
-            $sql1 = "SELECT * FROM followerfollower_tlb WHERE UserFollowerId<>' " . $row['UserId'] . " ' ";
-            $result1 = mysql_query($sql1);
-            mysql_num_rows($result1);
-            $rows = mysql_fetch_array($result1);
-            ?>
+        echo '<tr><strong>You may know ..</strong></tr>';
+        if (mysql_num_rows($result)) {
+            while ($row = mysql_fetch_array($result)) {
+                $sql1 = "SELECT * FROM followerfollower_tlb WHERE UserFollowerId<>' " . $row['UserId'] . " ' ";
+                $result1 = mysql_query($sql1);
+                mysql_num_rows($result1);
+                $rows = mysql_fetch_array($result1);
+                ?>
                 <tr id="post">
                     <td>
                         <div id="posttbl">

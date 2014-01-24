@@ -1,6 +1,7 @@
 <?php
+
 session_start();
-$con = mysql_connect("localhost", "root", "vish");
+$con = mysql_connect("localhost", "root", "");
 if (!$con) {
     die('Could not connect: ' . mysql_error());
 }
@@ -16,8 +17,8 @@ $result = mysql_query($sql);
 // store session data
 
 $row = mysql_fetch_array($result);
-$nameis=$row['UserName'];
-$id=$row['UserId'];
+$nameis = $row['UserName'];
+$id = $row['UserId'];
 $_SESSION['ids'] = $id;
 $_SESSION['views'] = $nameis;
 
