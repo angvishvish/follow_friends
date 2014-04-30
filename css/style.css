@@ -152,8 +152,7 @@
     border-radius: 25px 0px 25px 0px;
     box-shadow: 0px 0px 100px #248FB2;
 }
-#tables{
-}
+
 #signinbox{
     height: auto;
     width: 250px;
@@ -161,9 +160,9 @@
     padding: 14px;
     background-color:#C2E0FF;
     -webkit-border-radius: 15px 0px 15px 0px;
-    -moz-border-radius: 15px 0px 15px 0px;
-    -ms-border-radius: 15px 0px 15px 0px;
-    -o-border-radius: 15px 0px 15px 0px;
+       -moz-border-radius: 15px 0px 15px 0px;
+        -ms-border-radius: 15px 0px 15px 0px;
+         -o-border-radius: 15px 0px 15px 0px;
     border-radius: 15px 0px 15px 0px;
     box-shadow: 0px 0px 1000px black;
 }
@@ -175,10 +174,12 @@
     padding: 5px;
     margin: 2px;
     color: white;
+    height: 40px;
+    margin-top: 10px;
     -webkit-border-radius: 15px 10px 15px 10px;
-    -moz-border-radius: 15px 10px 15px 10px;
-    -ms-border-radius: 15px 10px 15px 10px;
-    -o-border-radius: 15px 10px 15px 10px;
+       -moz-border-radius: 15px 10px 15px 10px;
+        -ms-border-radius: 15px 10px 15px 10px;
+         -o-border-radius: 15px 10px 15px 10px;
     border-radius: 15px 10px 15px 10px;
     box-shadow: 3px 3px 1px black;
 }
@@ -202,9 +203,11 @@
 }
 
 #textbox{
+    float: left;
     padding:8px;
     color:#0033CC;
     font-weight:bold;
+    margin-top: 10px;
     border-right: 3px solid black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
