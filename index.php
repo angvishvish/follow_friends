@@ -29,16 +29,9 @@
         <div id="signin" align="center">
             <div id="signinbox" align="center">
                 <form id="signin1" action="login.php" method="post" name="wallpostform2" onsubmit="return val(signin1.email);">
-                    <table id="tables">
-                        <tr>    
-                            <td id="input"><input id="textbox" placeholder="Email" maxlength="30" type="email" size="30" name="email" /></td>
-                        </tr>
-                        <table id="tables">
-                            <tr>
-                                <td id="input"><input id="textbox" maxlength="20"  id="inputpassword" type="password" name="password" placeholder="Password" /></td>
-                                <td ><input id="clicksignin" type="submit" name="submit1" value="Sign In" /></td>
-                            </tr>
-                        </table>
+                    <input id="textbox" placeholder="Email" maxlength="30" type="email" size="30" name="email" /></td>
+                    <input id="textbox" maxlength="20"  id="inputpassword" type="password" name="password" placeholder="Password" /></td>
+                    <input id="clicksignin" type="submit" name="submit1" value="Sign In" />
                 </form>
             </div>
             <div id="signinbox" align="center">
